@@ -40,10 +40,10 @@ ansible_winrm_server_cert_validation: ignore
 **Not:** `remote_account` ve `remote_password` bilgilerini kendi ayarlarınıza göre düzenleyin.
 
 #### 5. PowerShell Scripti Oluşturma
-Windows makinesinde, `ConfigureRemotingForAnsible.ps1` adında bir PowerShell dosyası oluşturun ve aşağıdaki içeriği ekleyin:
+Windows makinesinde, `ConfigureRemotingForAnsible.ps1` adında bir PowerShell dosyası oluşturun ve aşağıdaki içeriği ekleyin ve daha sonra
+yönetici olarak çalıştırın:
 ```powershell
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-iex (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1')
+https://raw.githubusercontent.com/rallabandisrinivas/winrm_ansible/main/README.md
 ```
 Bu betik, Windows makinenizi Ansible ile uyumlu hale getirmek için gerekli ayarları yapar.
 
